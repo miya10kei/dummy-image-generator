@@ -1,5 +1,4 @@
 import re
-from typing import Tuple
 
 
 def format_name_for_driver_license(name: str) -> str:
@@ -65,7 +64,7 @@ def convert_to_western_year(year: str) -> str:
         str: 西暦（4桁の文字列）
     """
     # 年号と年数を抽出
-    match = re.match(r'(令和|平成|昭和|大正|明治)(\d+)', year)
+    match = re.match(r"(令和|平成|昭和|大正|明治)(\d+)", year)
     if not match:
         return year
 
@@ -84,4 +83,4 @@ def convert_to_western_year(year: str) -> str:
     elif era == "明治":
         return str(year_num + 1867)
     else:
-        return year 
+        return year

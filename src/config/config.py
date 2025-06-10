@@ -12,7 +12,7 @@ DRIVER_LICENSE_CONFIG = {
     "expired_year": {"position": (122, 150), "font_size": 25},
     "expired_year_western": {"position": (35, 150), "font_size": 25},
     "expired_month": {"position": (235, 150), "font_size": 25},
-    "expired_day": {"position": (287, 150), "font_size": 25}
+    "expired_day": {"position": (287, 150), "font_size": 25},
 }
 
 # マイナンバーカードの設定
@@ -25,12 +25,12 @@ INDIVIDUAL_NUMBER_CONFIG = {
     "sex": {"position": (470, 75), "font_size": 13},
     "expired_year": {"position": (314, 103), "font_size": 13},
     "expired_month": {"position": (370, 103), "font_size": 13},
-    "expired_day": {"position": (400, 103), "font_size": 13}
+    "expired_day": {"position": (400, 103), "font_size": 13},
 }
 
 # テンプレート画像とフォントのパス
 TEMPLATE_PATHS = {
     "driver_license": "templates/driver_license_template.png",
     "individual_number": "templates/individual_number_card_template.png",
-    "font": "fonts/NotoSansJP-Regular.ttf"
-} 
+    "font": "fonts/NotoSansJP-Regular.ttf",
+}
