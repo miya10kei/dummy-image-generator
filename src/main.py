@@ -58,7 +58,7 @@ def main():
             individual_number_generator = IndividualNumberCardGenerator(
                 TEMPLATE_PATHS["individual_number"], TEMPLATE_PATHS["font"]
             )
-            individual_number_path = os.path.join("output", get_filename(name, "Individual Number Card"))
+            individual_number_path = os.path.join("output", get_filename(name, "マイナンバーカード"))
             individual_number_generator.generate_card(individual_number_data, individual_number_path)
             print(f"マイナンバーカード生成完了: {individual_number_path}")
 
