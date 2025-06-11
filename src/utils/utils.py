@@ -84,3 +84,17 @@ def convert_to_western_year(year: str) -> str:
         return str(year_num + 1867)
     else:
         return year
+
+
+def format_month_day(value: str) -> str:
+    """
+    月または日を2桁の文字列にフォーマットする
+    1桁の場合は先頭に半角スペースを追加する
+
+    Args:
+        value (str): 月または日の値
+
+    Returns:
+        str: フォーマットされた2桁の文字列
+    """
+    return f" {value}" if len(value) == 1 else value

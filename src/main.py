@@ -9,6 +9,7 @@ from utils.utils import (
     format_name_for_individual_number_card,
     get_filename,
     convert_to_western_year,
+    format_month_day,
 )
 
 
@@ -29,13 +30,17 @@ def main():
             base_data = {
                 "name": format_name_for_driver_license(name),
                 "address": row["address"],
-                "birth_date": {"year": row["birth_year"], "month": row["birth_month"], "day": row["birth_day"]},
+                "birth_date": {
+                    "year": row["birth_year"],
+                    "month": format_month_day(row["birth_month"]),
+                    "day": format_month_day(row["birth_day"]),
+                },  
                 "sex": row["sex"],
                 "expired_date": {
                     "year": row["expired_year"],
                     "western_year": convert_to_western_year(row["expired_year"]),
-                    "month": row["expired_month"],
-                    "day": row["expired_day"],
+                    "month": format_month_day(row["expired_month"]),
+                    "day": format_month_day(row["expired_day"]),
                 },
             }
 
