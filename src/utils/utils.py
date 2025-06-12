@@ -38,6 +38,23 @@ def format_name_for_individual_number_card(name: str) -> str:
     return "　".join(parts)
 
 
+def format_representative_name(name: str) -> str:
+    """
+    代表者名用のフォーマット
+    半角・全角スペースを除去した後、文字の間に全角スペース1つを挿入した形式に変換する
+
+    Args:
+        name (str): 変換前の名前
+
+    Returns:
+        str: 変換後の名前（各文字の間に全角スペース1つを挿入）
+    """
+    # 半角・全角スペースを除去
+    name_without_spaces = name.replace(" ", "").replace("　", "")
+    # 文字の間に全角スペースを挿入
+    return "　".join(name_without_spaces)
+
+
 def get_filename(name: str, card_type: str) -> str:
     """
     姓名からファイル名を生成する
